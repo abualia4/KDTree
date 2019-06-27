@@ -1,8 +1,11 @@
 Scala Implementation of 2 Dimensional tree
 ==================================================================
 -Insert
+
 -Print
+
 -Search
+
 -Minimum Node
 
 Version 0
