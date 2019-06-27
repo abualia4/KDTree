@@ -1,13 +1,3 @@
-Scala Implementation of 2 Dimensional tree
-==================================================================
--Insert
-
--Print
-
--Search
-
--Minimum Node
-
-----------------------------------------------------------------
-Version 0
-27/6/2019
+K Dimensional Tree
+========================================
+2DTree file containt the scala Implementation for 2 D Tree
