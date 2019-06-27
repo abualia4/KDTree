@@ -71,13 +71,18 @@ class Dtree{
         return dt
     }
     
-    //Print all nodes
-    def printTree(node: Node):Unit={
-      if(node!=null) {
-           
-        println(node.value(0)+"," +node.value(1)) 
-        printTree(node.left)
-        printTree(node.right)
+    //Print all nodes with their locations (Root, left subtree and right subtree)
+    def printTree(node: Node, start:Int):Unit={
+        if(node!=null) {
+            if(node.value(0)==start)
+               println("Root: "+node.value(0)+"," +node.value(1))
+            else if(node.value(0)<start)
+                           println("Left subtree: " +node.value(0)+"," +node.value(1))
+                 else
+                    println("Right subtree: " +node.value(0)+"," +node.value(1) )
+                   
+        printTree(node.left,start)
+        printTree(node.right,start)
       }
     }
       
@@ -178,7 +183,8 @@ object test{
        var dt=node.createDTree()
        
        println("The 2D tree as follows:")
-       dt.printTree(dt.root)
+       dt.printTree(dt.root, dt.root.value(0) )
+
        
        var point=Array(1,2)
        if(dt.search(point))
